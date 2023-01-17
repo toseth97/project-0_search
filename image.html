@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Google Images</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+            crossorigin="anonymous"
+        />
+        <link rel="shortcut icon" href="./Google-small.png">
+        <style type="text/css">
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+       
+            }
+            .full_screen {
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+            }
+            .form {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                width: inherit;
+                margin-top: 5em;
+
+            }
+            .block {
+                display: block;
+            }
+            .search {
+                width: 80%;
+                max-width: 550px;
+                padding: 0.7em 2em;
+                border-radius: 5em;
+                border: 1px solid rgba(0, 0, 0, 0.2);
+            }
+            .search:hover {
+                border: 1px solid rgba(0, 0, 0, 0);
+                filter: drop-shadow(1px 1px 3px rgba(0,0,0,0.3));
+            }
+            .search:active, .search:focus{
+                
+                outline: none;
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                
+            }
+            .btns {
+                background-color: rgba(200, 200, 200, 0.1);
+                border-radius: 3px;
+                outline: none;
+                border: none;
+                padding: 0.5em;
+            }
+            .btns:hover{
+                box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+            }
+            .btns>a{
+                color: black;
+                text-decoration: none;
+            }
+            .nav{
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                opacity: .8;
+                padding: 1em 0;
+
+            }
+            .home{
+                padding: .5em 1.5em;
+                background-color: rgb(66,133,244);
+                border: none;
+
+                border-radius: 2px;
+            }
+            .nav>ul{
+                list-style: none;
+                display: flex;
+                gap: 1em;
+                align-items: flex-end;
+
+            }
+            ul>li{
+                padding: .5em 0;
+            }
+            .home>a{
+                text-decoration: none;
+                color: white;
+            }
+            .home>a:hover{
+                text-decoration: underline;
+            }
+            .pos{
+                position: relative;
+            }
+            .barge{
+                position: absolute;
+                right: 0;
+                bottom: .5rem;
+                color: rgb(66,133,244);
+                font-size: 1.1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="full_screen">
+            <div class="nav px-5">
+                <ul>
+                    <li class="home"><a href="./index.html">Home</a></li>
+                   
+                </ul>
+            </div>
+            <form action="http://www.google.com/images?q=your+search+terms" class="form">
+                <div class="pos">
+                    <img src="./google.png" class="img-fluid mb-4" />
+                    <p class="barge">images</p>
+                </div>
+                <input type="text" name="q" class="block search" autofocus/>
+               
+            </form>
+        </div>
+    </body>
+</html>
